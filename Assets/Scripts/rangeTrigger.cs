@@ -40,8 +40,6 @@ public class rangeTrigger : MonoBehaviour
             // whatsHeld.GetComponent<Rigidbody>().AddForce(new Vector3(8000, 300, 8000));
 
             isHolding = false;
-            whatsHeld.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            whatsHeld.GetComponent<Rigidbody>().freezeRotation = false;
             whatsHeld = null;
             dropping = true;
         }
@@ -51,7 +49,6 @@ public class rangeTrigger : MonoBehaviour
         {
             isHolding = true;
             whatsHeld = whatsInReach;
-            whatsHeld.GetComponent<Rigidbody>().freezeRotation = true;
         }
 
         // move object with player
