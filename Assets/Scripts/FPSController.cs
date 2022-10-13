@@ -60,12 +60,10 @@ public class FPSController : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
 
             //DOUBLE JUMP!
-            
             if (Input.GetButton("Jump") && canMove)
             {
                 moveDirection.y = jumpSpeed;
             }
-            
         }
 
         // Move the controller

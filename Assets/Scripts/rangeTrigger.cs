@@ -57,10 +57,8 @@ public class rangeTrigger : MonoBehaviour
         // move object with player
         if (isHolding)
         {
-            whatsHeld.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            whatsHeld.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.2f, gameObject.transform.position.z);
         }
-
-        Debug.Log(gameObject.transform.position.y);
 
         // reset drop
         dropping = false;
