@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class rangeTrigger : MonoBehaviour
 {
+    public GameObject Player;
+
     // is the player clicking this frame
     public bool clicked;
 
@@ -25,12 +27,20 @@ public class rangeTrigger : MonoBehaviour
     // what the player is currently holding
     public GameObject whatsHeld;
 
+    public Vector3 pastPosition;
+
     void Update()
     {
         // left click check
         if (Input.GetMouseButtonDown(0))
         {
             clicked = true;
+        }
+
+        // position held was in
+        if (whatsHeld)
+        {
+            pastPosition = whatsHeld.transform.position;
         }
 
         // drop item
@@ -57,7 +67,10 @@ public class rangeTrigger : MonoBehaviour
         // move object with player
         if (isHolding)
         {
-            whatsHeld.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.2f, gameObject.transform.position.z);
+            //if ()
+            {
+                whatsHeld.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.2f, gameObject.transform.position.z);
+            }
         }
 
         // reset drop
