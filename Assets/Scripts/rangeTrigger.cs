@@ -12,8 +12,11 @@ public class rangeTrigger : MonoBehaviour
     // is the player clicking this frame
     public bool clicked;
 
-    // is the player in reach of something
+    // is the player in reach of an item
     public bool isInReach = false;
+
+    // is the player in reach of a lever
+    public bool leverIsInReach = false;
 
     // is the player holding something
     public bool isHolding = false;
@@ -64,10 +67,15 @@ public class rangeTrigger : MonoBehaviour
             whatsHeld.GetComponent<Rigidbody>().freezeRotation = true;
         }
 
+        // if the player is in reach of something and clicks
+        if (leverIsInReach && clicked)
+        {
+            whatsInReach.GetComponent<lever>().pulled();
+        }
+
         // move object with player
         if (isHolding)
         {
-            //if ()
             {
                 whatsHeld.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.2f, gameObject.transform.position.z);
             }
@@ -91,16 +99,36 @@ public class rangeTrigger : MonoBehaviour
 
             whatsInReach = other.gameObject;
         }
+
+        // if in range of a lever
+        if (other.tag == "lever")
+        {
+            Debug.Log("lever entering collision");
+
+            leverIsInReach = true;
+
+            whatsInReach = other.gameObject;
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        // if in range of an interactable
+        // if leaving range of an interactable
         if (other.tag == "interactable")
         {
             Debug.Log("cube leaving collision");
 
             isInReach = false;
+
+            whatsInReach = null;
+        }
+
+        // if leaving range of a lever
+        if (other.tag == "lever")
+        {
+            Debug.Log("lever leaving collision");
+
+            leverIsInReach = false;
 
             whatsInReach = null;
         }
