@@ -71,7 +71,7 @@ public class rangeTrigger : MonoBehaviour
             isHolding = false;
             whatsHeld.GetComponent<Rigidbody>().velocity = Vector3.zero;
             whatsHeld.GetComponent<Rigidbody>().freezeRotation = false;
-            whatsHeld.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 7.0f, 3.0f);
+            whatsHeld.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 200.0f);
             whatsHeld = null;
             dropping = true;
         }
