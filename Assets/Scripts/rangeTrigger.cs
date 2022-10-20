@@ -9,8 +9,11 @@ public class rangeTrigger : MonoBehaviour
 {
     public GameObject Player;
 
-    // is the player clicking this frame
-    public bool clicked;
+    // is the player clicking right this frame
+    public bool clickedL;
+
+    // is the player clicking right this frame
+    public bool clickedR;
 
     // is the player in reach of an item
     public bool isInReach = false;
@@ -37,7 +40,13 @@ public class rangeTrigger : MonoBehaviour
         // left click check
         if (Input.GetMouseButtonDown(0))
         {
-            clicked = true;
+            clickedL = true;
+        }
+
+        // right click check
+        if (Input.GetMouseButtonDown(1))
+        {
+            clickedR = true;
         }
 
         // position held was in
@@ -47,11 +56,8 @@ public class rangeTrigger : MonoBehaviour
         }
 
         // drop item
-        if (isHolding && clicked)
+        if (isHolding && clickedL)
         {
-            // my girlfriend says to keep this line of code in the final game
-            // whatsHeld.GetComponent<Rigidbody>().AddForce(new Vector3(8000, 300, 8000));
-
             isHolding = false;
             whatsHeld.GetComponent<Rigidbody>().velocity = Vector3.zero;
             whatsHeld.GetComponent<Rigidbody>().freezeRotation = false;
@@ -59,8 +65,19 @@ public class rangeTrigger : MonoBehaviour
             dropping = true;
         }
 
+        // drop item
+        if (isHolding && clickedR)
+        {
+            isHolding = false;
+            whatsHeld.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            whatsHeld.GetComponent<Rigidbody>().freezeRotation = false;
+            whatsHeld.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 7.0f, 3.0f);
+            whatsHeld = null;
+            dropping = true;
+        }
+
         // if the player is in reach of something and clicks
-        if (isInReach && clicked && !dropping)
+        if (isInReach && clickedL && !dropping)
         {
             isHolding = true;
             whatsHeld = whatsInReach;
@@ -68,7 +85,7 @@ public class rangeTrigger : MonoBehaviour
         }
 
         // if the player is in reach of something and clicks
-        if (leverIsInReach && clicked)
+        if (leverIsInReach && clickedL)
         {
             whatsInReach.GetComponent<lever>().pulled();
         }
@@ -85,7 +102,9 @@ public class rangeTrigger : MonoBehaviour
         dropping = false;
 
         // reset click
-        clicked = false;
+        clickedL = false;
+        // reset click
+        clickedR = false;
     }
 
     void OnTriggerEnter(Collider other)
