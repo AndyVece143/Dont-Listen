@@ -94,7 +94,7 @@ public class rangeTrigger : MonoBehaviour
         if (isHolding)
         {
             {
-                whatsHeld.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.8f, gameObject.transform.position.z - 1.5f);
+                whatsHeld.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.2f, gameObject.transform.position.z);
             }
         }
 
