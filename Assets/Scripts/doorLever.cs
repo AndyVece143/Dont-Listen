@@ -8,6 +8,12 @@ public class doorLever : MonoBehaviour
 
     public bool allLeversActive = false;
 
+    //Audio
+    private AudioSource doorAudio;
+
+    [SerializeField]
+    private AudioClip doorSound;
+
     // is this door the left door of the two
     public bool isLeftDoor;
     public float xChange = 0.002f;
@@ -15,6 +21,11 @@ public class doorLever : MonoBehaviour
     public float zChange;
 
     int i = 0;
+
+    public void Start()
+    {
+        doorAudio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,6 +53,11 @@ public class doorLever : MonoBehaviour
             else
             {
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x + xChange, gameObject.transform.position.y+yChange, gameObject.transform.position.z+zChange);
+            }
+
+            if (!doorAudio.isPlaying)
+            {
+                doorAudio.PlayOneShot(doorSound);
             }
 
             i++;
