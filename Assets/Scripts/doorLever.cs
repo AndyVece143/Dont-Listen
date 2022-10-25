@@ -55,7 +55,7 @@ public class doorLever : MonoBehaviour
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x + xChange, gameObject.transform.position.y+yChange, gameObject.transform.position.z+zChange);
             }
 
-            if (!doorAudio.isPlaying)
+            if (!doorAudio.isPlaying && i == 0)
             {
                 doorAudio.PlayOneShot(doorSound);
             }
