@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -173,6 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  leverOn: {fileID: 0}
+  leverOff: {fileID: 0}
 --- !u!136 &188737659
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1306,6 +1308,7 @@ GameObject:
   - component: {fileID: 1714953269}
   - component: {fileID: 1714953268}
   - component: {fileID: 1714953267}
+  - component: {fileID: 1714953270}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1391,6 +1394,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714953265}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1714953270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714953265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64bfdaf716800234a8a93819a0d90e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemKeys:
+  - Item
+  itemColliding: 
+  activator: 0
 --- !u!1 &1759035293
 GameObject:
   m_ObjectHideFlags: 0
