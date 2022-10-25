@@ -1078,7 +1078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5672721197758997778, guid: a4a3f074dcec38049a82f105953367a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.000014
+      value: 8.01
       objectReference: {fileID: 0}
     - target: {fileID: 5672721197758997778, guid: a4a3f074dcec38049a82f105953367a1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1116,7 +1116,8 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7040565074666732840, guid: a4a3f074dcec38049a82f105953367a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a4a3f074dcec38049a82f105953367a1, type: 3}
 --- !u!1 &71968270 stripped
 GameObject:
@@ -1138,7 +1139,7 @@ MonoBehaviour:
   itemKeys:
   - Jug_Key1
   - Jug_Key2
-  itemColliding: 
+  itemColliding: 0000
   activator: 0
 --- !u!1 &72797454
 GameObject:
@@ -8282,7 +8283,7 @@ MonoBehaviour:
   - {fileID: 494624821}
   allLeversActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 0
+  isLeftDoor: 1
   xChange: 0.002
   yChange: 0
   zChange: 0
@@ -14843,7 +14844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemKeys:
   - Candlestick_Key1
-  itemColliding: 
+  itemColliding: 00
   activator: 0
 --- !u!1001 &1175916606
 PrefabInstance:
