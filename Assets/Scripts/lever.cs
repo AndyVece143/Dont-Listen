@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.Audio;
 
 public class lever : MonoBehaviour
 {
@@ -10,10 +11,20 @@ public class lever : MonoBehaviour
     private Animation anim;
     //private Animator anim;
 
+    //Audio stuff
+    private AudioSource custAudioSource;
+
+    [SerializeField]
+    private AudioClip leverOn;
+
+    [SerializeField]
+    private AudioClip leverOff;
+
     public void Start()
     {
         //anim = GetComponent<Animator>();
         anim = GetComponent<Animation>();
+        custAudioSource = GetComponent<AudioSource>();
     }
 
 
@@ -25,14 +36,15 @@ public class lever : MonoBehaviour
 
             // animate lever turning on
             anim.Play("Pull1");
-
+            custAudioSource.PlayOneShot(leverOn);
         }
         else 
         {
             currentState = false;
 
-            // animate lever turning of
+            // animate lever turning off
             anim.Play("Pull2");
+            custAudioSource.PlayOneShot(leverOff);
         }
     }
 }
