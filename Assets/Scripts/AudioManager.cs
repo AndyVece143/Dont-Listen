@@ -16,20 +16,21 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //Prevents two sounds from playing at the same time
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        //Prevents two of the same sound from playing at the same time
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
 
         //sounds maintain through scenes
         DontDestroyOnLoad(gameObject);
 
+        //Updates sounds in array with assigned attributes
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -44,13 +45,13 @@ public class AudioManager : MonoBehaviour
     //testing
     private void Start()
     {
-        Play("OpeningAudio");
     }
 
+    //Plays a sound with the given name. Sound must be in the audio manager array
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-
+        
         //sound not there check
         if (s == null)
         {
