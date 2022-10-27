@@ -60,6 +60,11 @@ public class doorLever : MonoBehaviour
                 doorAudio.PlayOneShot(doorSound);
             }
 
+            if (i == 1299)
+            {
+                doorAudio.Stop();
+            }
+
             i++;
         }
     }
