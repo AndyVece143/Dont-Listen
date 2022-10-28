@@ -5,6 +5,8 @@ using UnityEngine;
 public class door1Puzzle1 : MonoBehaviour
 {
     public GameObject lever;
+    public GameObject leverOther1;
+    public GameObject leverOther2;
 
     public bool active = false;
     public bool preActive = false;

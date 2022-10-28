@@ -918,11 +918,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 976204173053232217, guid: 6ca66488271782141805a2b16e033e68, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976204173053232217, guid: 6ca66488271782141805a2b16e033e68, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3004603718229738015, guid: 6ca66488271782141805a2b16e033e68, type: 3}
       propertyPath: m_RootOrder
@@ -974,11 +974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052007046321326236, guid: 6ca66488271782141805a2b16e033e68, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: interactable
       objectReference: {fileID: 0}
     - target: {fileID: 3953127125557526710, guid: 6ca66488271782141805a2b16e033e68, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ca66488271782141805a2b16e033e68, type: 3}
@@ -5285,6 +5285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b0faa7772a6f846b3b1b883b0147ea, type: 3}
+--- !u!1 &409877478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3089534150395411416, guid: f64a8a0dd9eb97f4eb6af5f5d56cb0b3, type: 3}
+  m_PrefabInstance: {fileID: 643835024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &422012475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5656,6 +5661,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9170109092055634427, guid: f64a8a0dd9eb97f4eb6af5f5d56cb0b3, type: 3}
   m_PrefabInstance: {fileID: 643835024}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &488511795
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409877478}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &488511796
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409877478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1482200469332310443, guid: 9923700bd9429a1438d87310d595f86e, type: 3}
 --- !u!1001 &490432748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8073,6 +8108,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -14.524}
+--- !u!1 &613927191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7236053085466416409, guid: e85ffcaaf70f66e44a7f13a968eda762, type: 3}
+  m_PrefabInstance: {fileID: 2023460965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &613927194
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613927191}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &613927195
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613927191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7779916524249223991, guid: 1a3b5b2069d0e24438d9593dc424dd01, type: 3}
 --- !u!1001 &614334319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8663,27 +8733,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lever: {fileID: 494624821}
-  active: 0
-  preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 1
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
---- !u!114 &639438209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639438199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 1768558057}
+  leverOther1: {fileID: 0}
+  leverOther2: {fileID: 0}
   active: 0
   preActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
@@ -8702,6 +8753,10 @@ PrefabInstance:
     - target: {fileID: 3089534150395411416, guid: f64a8a0dd9eb97f4eb6af5f5d56cb0b3, type: 3}
       propertyPath: m_Name
       value: Books_Preset_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089534150395411416, guid: f64a8a0dd9eb97f4eb6af5f5d56cb0b3, type: 3}
+      propertyPath: m_TagString
+      value: interactable
       objectReference: {fileID: 0}
     - target: {fileID: 9170109092055634427, guid: f64a8a0dd9eb97f4eb6af5f5d56cb0b3, type: 3}
       propertyPath: m_RootOrder
@@ -8749,6 +8804,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f64a8a0dd9eb97f4eb6af5f5d56cb0b3, type: 3}
+--- !u!1 &647126212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 912558797562616938, guid: 6711194b5edfbfb4980f7acd919dad24, type: 3}
+  m_PrefabInstance: {fileID: 1119834991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &647126215
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647126212}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &647126216
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647126212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7214874963237807513, guid: c39c47a8dfb31884abee801292de0b5a, type: 3}
 --- !u!1 &650128001
 GameObject:
   m_ObjectHideFlags: 0
@@ -9051,6 +9141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lever: {fileID: 218793736}
+  leverOther1: {fileID: 0}
+  leverOther2: {fileID: 0}
   active: 0
   preActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
@@ -9059,7 +9151,7 @@ MonoBehaviour:
   yChange: 0
   zChange: 0
   i: 0
---- !u!114 &656242304
+--- !u!114 &656242301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9068,18 +9160,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 656242294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
+  m_Script: {fileID: 11500000, guid: ebe57cf5d3865b643819892778aca426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lever: {fileID: 1768558057}
+  door: {fileID: 656242294}
+  isLeftDoor: 1
   active: 0
   preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 1
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
+  startOpen: 0
+  startClose: 0
 --- !u!1001 &661201709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20076,27 +20166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lever: {fileID: 494624821}
-  active: 0
-  preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 0
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
---- !u!114 &1562751528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562751518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 1768558057}
+  leverOther1: {fileID: 0}
+  leverOther2: {fileID: 0}
   active: 0
   preActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
@@ -24053,27 +24124,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1853873320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853873308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 218793736}
-  active: 0
-  preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 0
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
 --- !u!114 &1853873321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24086,7 +24136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lever: {fileID: 1768558057}
+  lever: {fileID: 218793736}
+  leverOther1: {fileID: 0}
+  leverOther2: {fileID: 0}
   active: 0
   preActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
@@ -24095,6 +24147,25 @@ MonoBehaviour:
   yChange: 0
   zChange: 0
   i: 0
+--- !u!114 &1853873325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853873308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe57cf5d3865b643819892778aca426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lever: {fileID: 1768558057}
+  door: {fileID: 1853873308}
+  isLeftDoor: 0
+  active: 0
+  preActive: 0
+  startOpen: 0
+  startClose: 0
 --- !u!1001 &1879647342
 PrefabInstance:
   m_ObjectHideFlags: 0
