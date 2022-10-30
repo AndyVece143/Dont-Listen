@@ -12,7 +12,7 @@ public class door2Puzzle1 : MonoBehaviour
     public bool active = false;
     public bool preActive = false;
 
-    int i = 0;
+    public int i = 0;
 
     public bool startOpen = false;
     public bool startClose = false;
@@ -44,6 +44,9 @@ public class door2Puzzle1 : MonoBehaviour
 
             if (i == 600)
             {
+                lever.GetComponent<lever>().currentState = true;
+                lever.GetComponent<lever>().pulled();
+
                 startOpen = false;
 
                 door.GetComponent<door1Puzzle1>().i = 600;
@@ -63,8 +66,11 @@ public class door2Puzzle1 : MonoBehaviour
 
             i--;
 
-            if (i == 600)
+            if (i == 0)
             {
+                lever.GetComponent<lever>().currentState = true;
+                lever.GetComponent<lever>().pulled();
+
                 startOpen = false;
 
                 door.GetComponent<door1Puzzle1>().i = 0;
@@ -78,6 +84,7 @@ public class door2Puzzle1 : MonoBehaviour
         else if (door.GetComponent<door1Puzzle1>().i == 600 && active && !preActive)
         {
             startClose = true;
+            i = 600;
         }
 
         preActive = active;

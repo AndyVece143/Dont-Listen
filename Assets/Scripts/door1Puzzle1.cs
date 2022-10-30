@@ -25,6 +25,8 @@ public class door1Puzzle1 : MonoBehaviour
 
     public int i = 0;
 
+    Vector3 previousPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,5 +84,7 @@ public class door1Puzzle1 : MonoBehaviour
         }
 
         preActive = active;
+
+        previousPos = gameObject.transform.position;
     }
 }
