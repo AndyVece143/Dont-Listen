@@ -7,6 +7,9 @@ public class buttressRise : MonoBehaviour
 {
     public GameObject pedestal1;
     public GameObject pedestal2;
+    public float xShift;
+    public float yShift;
+    public float zShift;
 
     // Update is called once per frame
     void Update()
