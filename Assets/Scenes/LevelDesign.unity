@@ -18053,7 +18053,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639438199}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b62fa6f1a1a424d80cdc7e99434573, type: 3}
   m_Name: 
@@ -18061,6 +18061,7 @@ MonoBehaviour:
   levers:
   - {fileID: 1768558057}
   - {fileID: 494624821}
+  - {fileID: 218793736}
   allLeversActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
   isLeftDoor: 1
@@ -18163,29 +18164,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &639438208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639438199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 494624821}
-  leverOther1: {fileID: 0}
-  leverOther2: {fileID: 0}
-  active: 0
-  preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 1
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
 --- !u!1001 &641832425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18600,13 +18578,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656242294}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b62fa6f1a1a424d80cdc7e99434573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levers:
   - {fileID: 1768558057}
+  - {fileID: 494624821}
   - {fileID: 218793736}
   allLeversActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
@@ -18710,49 +18689,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &656242300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656242294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 218793736}
-  leverOther1: {fileID: 0}
-  leverOther2: {fileID: 0}
-  active: 0
-  preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 1
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
---- !u!114 &656242301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656242294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe57cf5d3865b643819892778aca426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 1768558057}
-  door: {fileID: 656242294}
-  isLeftDoor: 1
-  active: 0
-  preActive: 0
-  i: 0
-  startOpen: 0
-  startClose: 0
 --- !u!1001 &661201709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41740,7 +41676,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562751518}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b62fa6f1a1a424d80cdc7e99434573, type: 3}
   m_Name: 
@@ -41748,6 +41684,7 @@ MonoBehaviour:
   levers:
   - {fileID: 1768558057}
   - {fileID: 494624821}
+  - {fileID: 218793736}
   allLeversActive: 0
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
   isLeftDoor: 0
@@ -41850,29 +41787,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1562751527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562751518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 494624821}
-  leverOther1: {fileID: 0}
-  leverOther2: {fileID: 0}
-  active: 0
-  preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 0
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
 --- !u!1 &1566701504
 GameObject:
   m_ObjectHideFlags: 0
@@ -49513,13 +49427,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853873308}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b62fa6f1a1a424d80cdc7e99434573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levers:
   - {fileID: 1768558057}
+  - {fileID: 494624821}
   - {fileID: 218793736}
   allLeversActive: 1
   doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
@@ -49623,49 +49538,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1853873321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853873308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08c65586891c914780ecc7cafe6edac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 218793736}
-  leverOther1: {fileID: 0}
-  leverOther2: {fileID: 0}
-  active: 0
-  preActive: 0
-  doorSound: {fileID: 8300000, guid: 8e228e62d229844a988df6011d13a04b, type: 3}
-  isLeftDoor: 0
-  xChange: 0.002
-  yChange: 0
-  zChange: 0
-  i: 0
---- !u!114 &1853873325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853873308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe57cf5d3865b643819892778aca426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lever: {fileID: 1768558057}
-  door: {fileID: 1853873308}
-  isLeftDoor: 0
-  active: 0
-  preActive: 0
-  i: 0
-  startOpen: 0
-  startClose: 0
 --- !u!1001 &1856103924
 PrefabInstance:
   m_ObjectHideFlags: 0
