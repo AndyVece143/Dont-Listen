@@ -48,7 +48,7 @@ public class doorLever : MonoBehaviour
         {
             if (isLeftDoor)
             {
-                gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.002f, gameObject.transform.position.y - zChange, gameObject.transform.position.z - zChange);  
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x - xChange, gameObject.transform.position.y - yChange, gameObject.transform.position.z - zChange);  
             }
             else
             {
