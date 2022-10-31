@@ -17,6 +17,10 @@ public class FPSController : MonoBehaviour
     public bool hasJumped;
     public bool prevSprint;
 
+    private bool paused = false;
+    public GameObject PauseMenu;
+    public GameObject ControlsMenu;
+
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
@@ -28,6 +32,9 @@ public class FPSController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+
+        PauseMenu.SetActive(false);
+        ControlsMenu.SetActive(false);
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -132,5 +139,64 @@ public class FPSController : MonoBehaviour
         //{
         //    FindObjectOfType<AudioManager>().Play("Sprint");
         //}
+
+        if (Input.GetButton("Cancel"))
+        {
+            if (!paused)
+            {
+                Time.timeScale = 0;
+                canMove = false;
+                characterController.enabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+                paused = true;
+
+                PauseMenuButton();
+            }
+            //else
+            //{
+            //    Time.timeScale = 1;
+            //    canMove = true;
+            //    characterController.enabled = true;
+            //    Cursor.lockState = CursorLockMode.Locked;
+            //    Cursor.visible = false;
+            //    paused = false;
+
+            //    BackToGame();
+            //}
+        }
+    }
+
+    public void BackToGame()
+    {
+        Debug.Log("Help");
+        Time.timeScale = 1;
+        canMove = true;
+        characterController.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        paused = false;
+        PauseMenu.SetActive(false);
+        ControlsMenu.SetActive(false);
+
+    }
+
+    public void PauseMenuButton()
+    {
+        PauseMenu.SetActive(true);
+        ControlsMenu.SetActive(false);
+
+    }
+
+    public void ControlsMenuButton()
+    {
+        PauseMenu.SetActive(false);
+        ControlsMenu.SetActive(true);
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
     }
 }
