@@ -16,7 +16,7 @@ public class doorLever : MonoBehaviour
 
     // is this door the left door of the two
     public bool isLeftDoor;
-    public float xChange = 0.002f;
+    public float xChange;
     public float yChange;
     public float zChange;
 
