@@ -225,7 +225,7 @@ public class FPSController : MonoBehaviour
 
     public void QuitToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitButton()
