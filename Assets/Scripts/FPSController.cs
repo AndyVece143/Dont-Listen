@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
@@ -20,6 +22,8 @@ public class FPSController : MonoBehaviour
     private bool paused = false;
     public GameObject PauseMenu;
     public GameObject ControlsMenu;
+    public GameObject EndGameMenu;
+    private bool gameEnd = false;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -35,6 +39,11 @@ public class FPSController : MonoBehaviour
 
         PauseMenu.SetActive(false);
         ControlsMenu.SetActive(false);
+        EndGameMenu.SetActive(false);
+
+        Time.timeScale = 1;
+        canMove = true;
+        characterController.enabled = true;
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -166,11 +175,30 @@ public class FPSController : MonoBehaviour
             //    BackToGame();
             //}
         }
+
+        if (transform.position.x <= -58 && transform.position.x >= -69 &&
+            transform.position.z <= 39 && transform.position.z >=25
+            && !gameEnd)
+        {
+            gameEnd = true;
+            paused = true;
+            Time.timeScale = 0;
+            canMove = false;
+            characterController.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            EndGameScreen();
+        }
+    }
+
+    public void EndGameScreen()
+    {
+        EndGameMenu.SetActive(true);
     }
 
     public void BackToGame()
     {
-        Debug.Log("Help");
         Time.timeScale = 1;
         canMove = true;
         characterController.enabled = true;
@@ -193,6 +221,11 @@ public class FPSController : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         ControlsMenu.SetActive(true);
+    }
+
+    public void QuitToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void QuitButton()
