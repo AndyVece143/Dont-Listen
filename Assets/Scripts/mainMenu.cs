@@ -24,7 +24,7 @@ public class mainMenu : MonoBehaviour
     public void PlayButton()
     {
         FindObjectOfType<AudioManager>().Play("Button");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void ControlsButton()
