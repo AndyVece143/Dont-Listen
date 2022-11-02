@@ -17,7 +17,7 @@ public class doorItemActivate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pedestal1.GetComponent<itemDestination>().activator && pedestal2.GetComponent<itemDestination>().activator && i < 60)
+        if (pedestal1.GetComponent<itemDestination>().activator && pedestal2.GetComponent<itemDestination>().activator && i < 360)
         {
             this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + xShift, this.gameObject.transform.position.y + yShift, this.gameObject.transform.position.z + zShift);
             i++;
