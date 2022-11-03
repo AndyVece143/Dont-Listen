@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12736416, g: 0.13419397, b: 0.12112127, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -223,8 +223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 100}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 550, y: 100}
+  m_SizeDelta: {x: 350, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &26506614
 MonoBehaviour:
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -247,7 +247,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 9f008ea2652c5594ab4133d09c610059, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -259,7 +259,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "Fonts Used:\nIM Fell English\nKosan Murah! Font Family\nHesitation Marks
+    Font\n\nVST used for Sound Track:\nBBC Symphony Orchestra Discover from Spitfire
+    Audio\n\nFire sound effect from:\nPixabay.com\n\nFire Png:\neffects-fire-flame-sparkling-explosion
+    from purepng.com\n\nAll Dungeon Meshes and Models:\n\"Multistory Dungeons\" by
+    Mana Station - Environments\r"
 --- !u!222 &26506615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -323,6 +327,7 @@ Transform:
   - {fileID: 1012035523}
   - {fileID: 2031784404}
   - {fileID: 249504647}
+  - {fileID: 2112094096}
   - {fileID: 1224445600}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2655,7 +2660,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 53094091}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1233758195 stripped
 Transform:
@@ -3349,23 +3354,22 @@ MonoBehaviour:
   m_Text: 'Lead Programmer - Chase Byrne
 
 
-    Narrative Leads - Deegan Melchiondo
-    and Yevhenii Shyshko
-
-    UI Design Lead -  Matthew Wilt
-
-    Sounds Design
-    Lead - Deegan Melchiondo and Matthew Wilt
-
     3D Design - Andy Vece
 
-    Version
-    Control Lead - Andy Vece
-
-    Lead Programmer - Chase Byrne
-
     Level Design
-    Lead - Yevhenii Shyshko'
+    Lead - Yevhenii Shyshko
+
+    Narrative Leads - Deegan Melchiondo and Yevhenii
+    Shyshko
+
+    Sounds Design Lead - Deegan Melchiondo and Matthew Wilt
+
+    UI
+    Design Lead -  Matthew Wilt
+
+    Version Control Lead - Andy Vece
+
+'
 --- !u!222 &1473068760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4445,6 +4449,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0141db896ece3e04b9ee15a9d4fcb4b2, type: 3}
+--- !u!4 &2112094096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7501009951188656924, guid: 0141db896ece3e04b9ee15a9d4fcb4b2, type: 3}
+  m_PrefabInstance: {fileID: 2112094095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2119891369
 GameObject:
   m_ObjectHideFlags: 0
