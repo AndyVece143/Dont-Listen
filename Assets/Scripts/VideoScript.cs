@@ -20,7 +20,10 @@ public class VideoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButton("Cancel"))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     private void SendToNextScene_loopPointReached(VideoPlayer source)
